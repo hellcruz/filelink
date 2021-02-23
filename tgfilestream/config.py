@@ -27,16 +27,16 @@ if not 1 <= port <= 65535:
     sys.exit(1)
 
 try:
-    api_id = int(os.environ["2898344"])
-    api_hash = os.environ["295d449480357269a6f7d74b83fff771"]
+    api_id = "2898344"
+    api_hash = "295d449480357269a6f7d74b83fff771"
 except (KeyError, ValueError):
     print("Please set the TG_API_ID and TG_API_HASH environment variables correctly")
     print("You can get your own API keys at https://my.telegram.org/apps")
     sys.exit(1)
 
 trust_headers = bool(os.environ.get("TRUST_FORWARD_HEADERS"))
-host = os.environ.get("HOST", "localhost")
-public_url = URL(os.environ.get("PUBLIC_URL", f"http://{host}:{port}"))
+host = "0.0.0.0"
+public_url = URL("https://dfile11.herokuapp.com/")
 
 session_name = os.environ.get("TG_SESSION_NAME", "tgfilestream")
 
@@ -61,4 +61,4 @@ except ValueError:
 start_message = os.environ.get("TG_START_MESG", "Send an image or file to get a link to download it")
 group_chat_message = os.environ.get("TG_G_C_MESG", "Sorry. But, I only work in private.")
 
-tg_bot_token = os.environ.get("1608865618:AAHLpyyzols1UdADw-AsYlwetn-WcKZl-0s", None)
+tg_bot_token = "1608865618:AAEH_JZ2YhwX2fPMxVlazGG43olYk63RYJU"
