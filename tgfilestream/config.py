@@ -36,7 +36,7 @@ except (KeyError, ValueError):
 
 trust_headers = bool(os.environ.get("TRUST_FORWARD_HEADERS"))
 host = "0.0.0.0"
-public_url = URL("https://dfile11.herokuapp.com/")
+public_url = URL("http://shy-bird-2997.f7daoew1.uffizziapp.com/")
 
 session_name = os.environ.get("TG_SESSION_NAME", "tgfilestream")
 
