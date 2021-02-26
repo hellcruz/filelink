@@ -1,21 +1,5 @@
-# tgfilestream - A Telegram bot that can stream Telegram files to users over HTTP.
-# Copyright (C) 2019 Tulir Asokan
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU Affero General Public License for more details.
-#
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-import asyncio
 import sys
+import asyncio
 
 from aiohttp import web
 from telethon import functions
@@ -30,8 +14,6 @@ server.add_routes(routes)
 runner = web.AppRunner(server)
 
 loop = asyncio.get_event_loop()
-
-
 async def start() -> None:
     await client.start(bot_token=tg_bot_token)
 
@@ -47,13 +29,9 @@ async def start() -> None:
 
     await runner.setup()
     await web.TCPSite(runner, host, port).start()
-
-
 async def stop() -> None:
     await runner.cleanup()
     await client.disconnect()
-
-
 try:
     loop.run_until_complete(start())
 except Exception:
