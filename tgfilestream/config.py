@@ -19,7 +19,7 @@ trust_headers = bool(os.environ.get("TRUST_FORWARD_HEADERS"))
 host = "0.0.0.0"
 public_url = URL("http://dfilelink.herokuapp.com/")
 
-session_name = os.environ.get("TG_SESSION_NAME", "tgfilestream")
+session_name = os.environ.get("TG_SESSION_NAME", "filestream")
 
 log_config = os.environ.get("LOG_CONFIG")
 debug = bool(os.environ.get("DEBUG"))
