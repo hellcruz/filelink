@@ -1,11 +1,11 @@
 import setuptools
-from tgfilestream import __version__
+from filestream import __version__
 try:
     long_desc = open("README.md").read()
 except IOError:
     long_desc = "Failed to read README.md"
 setuptools.setup(
-    name="tgfilestream",
+    name="filestream",
     version=__version__,
     url="https://mau.dev/tulir/tgfilestream",
     author="Tulir Asokan",
